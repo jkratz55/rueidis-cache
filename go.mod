@@ -1,4 +1,4 @@
-module github.com/jkratz55/redis-cache/v2
+module github.com/jkratz55/rueidis-cache
 
 go 1.22
 

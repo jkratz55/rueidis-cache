@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/jkratz55/redis-cache/v2/compression/brotli"
-	"github.com/jkratz55/redis-cache/v2/compression/flate"
-	"github.com/jkratz55/redis-cache/v2/compression/gzip"
-	"github.com/jkratz55/redis-cache/v2/compression/lz4"
+	"github.com/jkratz55/rueidis-cache/compression/brotli"
+	"github.com/jkratz55/rueidis-cache/compression/flate"
+	"github.com/jkratz55/rueidis-cache/compression/gzip"
+	"github.com/jkratz55/rueidis-cache/compression/lz4"
 )
 
 // Option allows for the Cache behavior/configuration to be customized.

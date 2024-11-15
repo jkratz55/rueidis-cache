@@ -21,8 +21,8 @@ import (
 	"go.opentelemetry.io/otel/sdk/trace"
 	semconv "go.opentelemetry.io/otel/semconv/v1.26.0"
 
-	cache "github.com/jkratz55/redis-cache/v2"
-	"github.com/jkratz55/redis-cache/v2/cacheotel"
+	cache "github.com/jkratz55/rueidis-cache"
+	"github.com/jkratz55/rueidis-cache/cacheotel"
 
 	"go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp"
 	"go.opentelemetry.io/otel/exporters/prometheus"
@@ -80,8 +80,7 @@ func main() {
 	// Initialize the Rueidis Redis client with OpenTelemetry tracing
 	// Note you can customize the client parameters here as needed
 	redisClient, err := rueidisotel.NewClient(rueidis.ClientOption{
-		InitAddress:       []string{"localhost:6379"},
-		ForceSingleClient: true,
+		InitAddress: []string{"localhost:6379"},
 	},
 		rueidisotel.WithMeterProvider(provider),
 		rueidisotel.WithTracerProvider(traceProvider),

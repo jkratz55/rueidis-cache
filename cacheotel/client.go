@@ -9,7 +9,7 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/metric"
 
-	cache "github.com/jkratz55/redis-cache/v2"
+	cache "github.com/jkratz55/rueidis-cache"
 )
 
 func InstrumentClient(c rueidis.Client, opts ...Option) (rueidis.Client, error) {
